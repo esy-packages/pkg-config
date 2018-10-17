@@ -1,0 +1,16 @@
+{
+  "name": "pkg-config",
+  "version": "0.29.0",
+  "description": "pkg-config is a helper tool used when compiling applications and libraries.",
+  "source": "https://pkg-config.freedesktop.org/releases/pkg-config-0.29.tar.gz#f4b19d203b3896a4293af4b62c7f908063c88a5a",
+  "override": {
+    "buildsInSource": true,
+    "build": [
+      "./configure --prefix #{self.install}",
+      "make"
+    ],
+    "install": [
+      "make install"
+    ]
+  }
+}
